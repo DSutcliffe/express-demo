@@ -63,6 +63,16 @@ app.get('/chuckNorris', async (req, res) => {
     }) 
 })
 
+// ********** Rapid API version not working ************
+app.get('/chuckNorrisRapidAPI', async (req, res) => {
+    let data = await getAPI.getchuckNorrisRapidAPI()
+    console.log(data)
+    res.render('chuckNorrisRapidAPI', {
+        data,
+        title: `Random Joke: ${data}`
+    }) 
+})
+
 app.get('/cocktail', async (req, res) => {
     let data = await getAPI.getCocktail()
     console.log(data)
