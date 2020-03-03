@@ -85,9 +85,120 @@ app.get('/chuckNorrisRapidAPI', async (req, res) => {
 app.get('/cocktail', async (req, res) => {
     let data = await getAPI.getCocktail()
     console.log(data)
+
+    let ing1 = data.drinks[0].strIngredient1
+    let meas1 = data.drinks[0].strMeasure1
+    let ing2 = data.drinks[0].strIngredient2
+    let meas2 = data.drinks[0].strMeasure2
+    let ing3 = data.drinks[0].strIngredient3
+    let meas3 = data.drinks[0].strMeasure3
+    let ing4 = data.drinks[0].strIngredient4
+    let meas4 = data.drinks[0].strMeasure4
+    let ing5 = data.drinks[0].strIngredient5
+    let meas5 = data.drinks[0].strMeasure5
+    let ing6 = data.drinks[0].strIngredient6
+    let meas6 = data.drinks[0].strMeasure6
+    let ing7 = data.drinks[0].strIngredient7
+    let meas7 = data.drinks[0].strMeasure7
+    let ing8 = data.drinks[0].strIngredient8
+    let meas8 = data.drinks[0].strMeasure8
+    let ing9 = data.drinks[0].strIngredient9
+    let meas9 = data.drinks[0].strMeasure9
+    let ing10 = data.drinks[0].strIngredient10
+    let meas10 = data.drinks[0].strMeasure10
+    let ing11 = data.drinks[0].strIngredient11
+    let meas11 = data.drinks[0].strMeasure11
+    let ing12 = data.drinks[0].strIngredient12
+    let meas12 = data.drinks[0].strMeasure12
+    let ing13 = data.drinks[0].strIngredient13
+    let meas13 = data.drinks[0].strMeasure13
+    let ing14 = data.drinks[0].strIngredient14
+    let meas14 = data.drinks[0].strMeasure14
+    let ing15 = data.drinks[0].strIngredient15
+    let meas15 = data.drinks[0].strMeasure15
+
+    if (data.drinks[0].strIngredient1 === null) {
+        ing1 = ""
+        meas1 = ""
+    }
+    if (data.drinks[0].strIngredient2 === null) {
+        ing2 = ""
+        meas2 = ""
+    }
+    if (data.drinks[0].strIngredient3 === null) {
+        ing3 = ""
+        meas3 = ""
+    }
+    if (data.drinks[0].strIngredient4 === null) {
+        ing4 = ""
+        meas4 = ""
+    }
+    if (data.drinks[0].strIngredient5 === null) {
+        ing5 = ""
+        meas5 = ""
+    }
+    if (data.drinks[0].strIngredient6 === null) {
+        ing6 = ""
+        meas6 = ""
+    }
+    if (data.drinks[0].strIngredient7 === null) {
+        ing7 = ""
+        meas7 = ""
+    }
+    if (data.drinks[0].strIngredient8 === null) {
+        ing8 = ""
+        meas8 = ""
+    }
+    if (data.drinks[0].strIngredient9 === null) {
+        ing9 = ""
+        meas9 = ""
+    }
+    if (data.drinks[0].strIngredient10 === null) {
+        ing10 = ""
+        meas10 = ""
+    }
+    if (data.drinks[0].strIngredient11 === null) {
+        ing11 = ""
+        meas11 = ""
+    }
+    if (data.drinks[0].strIngredient12 === null) {
+        ing12 = ""
+        meas12 = ""
+    }
+    if (data.drinks[0].strIngredient13 === null) {
+        ing13 = ""
+        meas13 = ""
+    }
+    if (data.drinks[0].strIngredient14 === null) {
+        ing14 = ""
+        meas14 = ""
+    }
+    if (data.drinks[0].strIngredient15 === null) {
+        ing15 = ""
+        meas15 = ""
+    }
+
     res.render('cocktail', {
         data,
-        title: `Your Cocktail: ${data.drinks[0].strDrink}`
+        title: `Cocktail Name: ${data.drinks[0].strDrink}`,
+        instructions: `${data.drinks[0].strInstructions}`,
+        picture: `${data.drinks[0].strDrinkThumb}`,
+        ing1: `${ing1}`,
+        ing2: `${ing2}`,
+        ing3: `${ing3}`,
+        ing4: `${ing4}`,
+        ing5: `${ing5}`,
+        ing6: `${ing6}`,
+        ing7: `${ing7}`,
+        ing8: `${ing8}`,
+        ing9: `${ing9}`,
+        ing10: `${ing10}`,
+        ing11: `${ing11}`,
+        ing12: `${ing12}`,
+        ing13: `${ing13}`,
+        ing14: `${ing14}`,
+        ing15: `${ing15}`,
+        
     }) 
 })
 

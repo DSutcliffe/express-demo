@@ -34,3 +34,25 @@ a {
 .navLink:hover {
     font-size: larger;
 }
+
+.drinkIngred {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.box {
+    width: 450px;
+}
+
+.drinkPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 410px;
+    border-radius: 50%;
+}
+
+.ingred {
+    padding-left: 20px;
+}
