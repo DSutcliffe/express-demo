@@ -39,9 +39,17 @@ app.get('/', async (req, res) => {          // add async!
     // sendFile is for express only, no templating engine used.
     // res.sendFile(__dirname + '/index.html');    // double underscore '__' for directory name not to get confused with snake_case
     // dont need sendFile anymore as going to render instead
-    let data = await getAPI.getWeather()
-    console.log(data);
     res.render('index')
+})
+
+app.get('/weather', async (req, res) => {
+    // res.sendFile(__dirname + '/about.html');    // sendFile just sends, render renders the file
+    let data = await getAPI.getWeather()
+    console.log(data)
+    res.render('weather', {
+        data,
+        title: `Weather Data: ${data}`
+    }) 
 })
 
 app.get('/harryPotter', async (req, res) => {
