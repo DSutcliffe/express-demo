@@ -118,8 +118,8 @@ app.get('/cocktail', async (req, res) => {
     let meas15 = data.drinks[0].strMeasure15
 
     if (data.drinks[0].strIngredient1 === null) {
-        ing1 = ""
-        meas1 = ""
+        ing1 = "";
+        meas1 = "";
     }
     if (data.drinks[0].strIngredient2 === null) {
         ing2 = ""
@@ -184,20 +184,35 @@ app.get('/cocktail', async (req, res) => {
         instructions: `${data.drinks[0].strInstructions}`,
         picture: `${data.drinks[0].strDrinkThumb}`,
         ing1: `${ing1}`,
+        meas1: `${meas1}`,
         ing2: `${ing2}`,
+        meas2: `${meas2}`,
         ing3: `${ing3}`,
+        meas3: `${meas3}`,
         ing4: `${ing4}`,
+        meas4: `${meas4}`,
         ing5: `${ing5}`,
+        meas5: `${meas5}`,
         ing6: `${ing6}`,
+        meas6: `${meas6}`,
         ing7: `${ing7}`,
+        meas7: `${meas7}`,
         ing8: `${ing8}`,
+        meas8: `${meas8}`,
         ing9: `${ing9}`,
+        meas9: `${meas9}`,
         ing10: `${ing10}`,
+        meas10: `${meas10}`,
         ing11: `${ing11}`,
+        meas11: `${meas11}`,
         ing12: `${ing12}`,
+        meas12: `${meas12}`,
         ing13: `${ing13}`,
+        meas13: `${meas13}`,
         ing14: `${ing14}`,
+        meas14: `${meas14}`,
         ing15: `${ing15}`,
+        meas15: `${meas15}`
         
     }) 
 })
