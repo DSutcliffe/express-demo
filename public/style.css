@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+.navbarSection {
+    text-align: center;
+    background-color: rosybrown;
+    font-family: 'Anton', sans-serif;
+}
+
+.navbar {
+    height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style-type: none;
+    list-style-position:inside;
+    margin:0;
+    padding:0;
+    /* border-style: double; */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    /* border-style: dotted; */
+}
+
+.navLink {
+    /* background-color: gray; */
+    width: 200px;
+}
+
+.navLink:hover {
+    font-size: larger;
+}

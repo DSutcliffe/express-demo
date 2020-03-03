@@ -48,7 +48,8 @@ app.get('/weather', async (req, res) => {
     console.log(data)
     res.render('weather', {
         data,
-        title: `Weather Data: ${data}`
+        title: `Weather Data: ${data.weather[0].description}`,
+        other: `Location: ${data.name}`
     }) 
 })
 
