@@ -220,9 +220,15 @@ app.get('/cocktail', async (req, res) => {
 app.get('/pokemon', async (req, res) => {
     let data = await getAPI.getPokemon()
     console.log(data)
+
+    let randomNumber;
+    randomNumber = Math.ceil(Math.random()*20);
+    console.log(randomNumber);
+
     res.render('pokemon', {
         data,
-        title: `${data.results[0].name}`
+        // title: `${data.results[0].name}`
+        title: `${data.results[randomNumber].name}`
     }) 
 })
 
